@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link   href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -12,12 +12,16 @@
         <h3>PHP CRUD Grid</h3>
     </div>
     <div class="row">
+        <p>
+            <a href="../resources/views/Create.php" class="btn btn-success">Create</a>
+        </p>
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
                 <th>Name</th>
                 <th>Email Address</th>
                 <th>Mobile Number</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
@@ -30,6 +34,13 @@
                 echo '<td>'. $row['name'] . '</td>';
                 echo '<td>'. $row['email'] . '</td>';
                 echo '<td>'. $row['mobile'] . '</td>';
+                echo '<td width=250>';
+                echo '<a class="btn" href="../resources/views/Read.php?id='.$row['id'].'">Read</a>';
+                echo ' ';
+                echo '<a class="btn btn-success" href="../resources/views/update.php?id='.$row['id'].'">Update</a>';
+                echo ' ';
+                echo '<a class="btn btn-danger" href="../resources/views/delete.php?id='.$row['id'].'">Delete</a>';
+                echo '</td>';
                 echo '</tr>';
             }
             Database::disconnect();
@@ -37,6 +48,6 @@
             </tbody>
         </table>
     </div>
-</div>
+</div> <!-- /container -->
 </body>
 </html>
