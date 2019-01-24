@@ -41,6 +41,6 @@ if ( !empty($_POST)) {
         $q = $pdo->prepare($sql);
         $q->execute(array($name,$email,$mobile));
         Database::disconnect();
-        header("Location: ../../../public/index.php");
     }
+    header("Location: ../../../public/index.php");
 }

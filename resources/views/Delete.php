@@ -17,7 +17,7 @@ if ( !empty($_POST)) {
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     Database::disconnect();
-    header("Location: index.php");
+    header("Location: ../../public/index.php");
 
 }
 ?>
@@ -38,12 +38,12 @@ if ( !empty($_POST)) {
             <h3>Delete a Customer</h3>
         </div>
 
-        <form class="form-horizontal" action="../../app/http/controllers" method="post">
+        <form class="form-horizontal" action="delete.php" method="post">
             <input type="hidden" name="id" value="<?php echo $id;?>"/>
             <p class="alert alert-error">Are you sure to delete ?</p>
             <div class="form-actions">
                 <button type="submit" class="btn btn-danger">Yes</button>
-                <a class="btn" href="index.php">No</a>
+                <a class="btn" href="../../public/index.php">No</a>
             </div>
         </form>
     </div>

@@ -27,7 +27,7 @@
             <div class="control-group <?php echo !empty($emailError)?'error':'';?>">
                 <label class="control-label">Email Address</label>
                 <div class="controls">
-                    <input name="email" type="text" placeholder="Email Address" value="<?php echo !empty($email)?$email:'';?>">
+                    <input name="email" type="email" placeholder="Email Address" value="<?php echo !empty($email)?$email:'';?>">
                     <?php if (!empty($emailError)): ?>
                         <span class="help-inline"><?php echo $emailError;?></span>
                     <?php endif;?>
@@ -36,7 +36,7 @@
             <div class="control-group <?php echo !empty($mobileError)?'error':'';?>">
                 <label class="control-label">Mobile Number</label>
                 <div class="controls">
-                    <input name="mobile" type="text"  placeholder="Mobile Number" value="<?php echo !empty($mobile)?$mobile:'';?>">
+                    <input name="mobile" type="number"  placeholder="Mobile Number" value="<?php echo !empty($mobile)?$mobile:'';?>">
                     <?php if (!empty($mobileError)): ?>
                         <span class="help-inline"><?php echo $mobileError;?></span>
                     <?php endif;?>

@@ -7,7 +7,7 @@ if ( !empty($_GET['id'])) {
 }
 
 if ( null==$id ) {
-    header("Location: index.php");
+    header("Location: ../../public/index.php");
 }
 
 if ( !empty($_POST)) {
@@ -49,7 +49,7 @@ if ( !empty($_POST)) {
         $q = $pdo->prepare($sql);
         $q->execute(array($name,$email,$mobile,$id));
         Database::disconnect();
-        header("Location: index.php");
+        header("Location: ../../public/index.php");
     }
 } else {
     $pdo = Database::connect();
