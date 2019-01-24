@@ -37,9 +37,9 @@
                 echo '<td width=250>';
                 echo '<a class="btn" href="../resources/views/Read.php?id='.$row['id'].'">Read</a>';
                 echo ' ';
-                echo '<a class="btn btn-success" href="../resources/views/update.php?id='.$row['id'].'">Update</a>';
+                echo '<a class="btn btn-success" href="../resources/views/Update.php?id='.$row['id'].'">Update</a>';
                 echo ' ';
-                echo '<a class="btn btn-danger" href="../resources/views/delete.php?id='.$row['id'].'">Delete</a>';
+                echo '<a class="btn btn-danger" href="../resources/views/Delete.php?id='.$row['id'].'">Delete</a>';
                 echo '</td>';
                 echo '</tr>';
             }
