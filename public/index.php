@@ -39,7 +39,7 @@
                 echo ' ';
                 echo '<a class="btn btn-success" href="../resources/views/Update.php?id='.$row['id'].'">Update</a>';
                 echo ' ';
-                echo '<a class="btn btn-danger" href="../resources/views/Delete.php?id='.$row['id'].'">Delete</a>';
+                echo '<a class="btn btn-danger" href="../resources/views/Delete.php?id='.$row['id'].'&user='.$row['name'].'">Delete</a>';
                 echo '</td>';
                 echo '</tr>';
             }
